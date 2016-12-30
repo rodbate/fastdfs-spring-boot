@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>upload</title>
+</head>
+<body>
+
+
+<h2>list groups: /test/groups</h2>
+<form action="/test/groups" method="get">
+        <input type="submit" value="提交">
+</form>
+
+<h2>list storages: /test/storages</h2>
+<form action="/test/storages" method="post">
+    <p>
+        groupName : <input type="text" name="group"/>
+    <p>
+        storageIp : <input type="text" name="storageIp"/>
+    <p>
+    <input type="submit" value="提交">
+</form>
+
+
+<h2>upload file: /test/upload</h2>
+
+
+<form action="/test/upload" method="post" enctype="multipart/form-data">
+    <p>
+        groupName : <input type="text" name="groupName"/>
+    <p>
+        选择文件:<input type="file" name="file">
+    <p>
+        <input type="submit" value="提交">
+</form>
+
+
+<h2>upload append file: /test/append/new</h2>
+<form action="/test/append/new" method="post" enctype="multipart/form-data">
+    <p>
+        groupName : <input type="text" name="groupName"/>
+    <p>
+        选择文件:<input type="file" name="file">
+    <p>
+        <input type="submit" value="提交">
+</form>
+
+
+<h2> append file: /test/append/add</h2>
+<form action="/test/append/add" method="post" enctype="multipart/form-data">
+    <p>
+        groupName : <input type="text" name="groupName"/>
+    <p>
+        filename : <input type="text" name="filename"/>
+    <p>
+        选择文件:<input type="file" name="file">
+    <p>
+        <input type="submit" value="提交">
+</form>
+
+
+<h2> modify append file: /test/append/modify</h2>
+<form action="/test/append/modify" method="post" enctype="multipart/form-data">
+    <p>
+        groupName : <input type="text" name="groupName"/>
+    <p>
+        filename : <input type="text" name="filename"/>
+    <p>
+        offset : <input type="text" name="offset"/>
+    <p>
+        选择文件:<input type="file" name="file">
+    <p>
+        <input type="submit" value="提交">
+</form>
+
+
+<h2> truncate append file: /test/append/truncate</h2>
+<form action="/test/append/truncate" method="post">
+    <p>
+        groupName : <input type="text" name="groupName"/>
+    <p>
+        filename : <input type="text" name="filename"/>
+    <p>
+        offset : <input type="text" name="offset"/>
+    <p>
+        <input type="submit" value="提交">
+</form>
+
+
+<h2> download file: /test/download</h2>
+<form action="/test/download" method="post">
+    <p>
+        groupName : <input type="text" name="group"/>
+    <p>
+        filename : <input type="text" name="filename"/>
+    <p>
+        <input type="submit" value="download">
+</form>
+
+
+<h2>get file meta: /test/meta/get</h2>
+<form action="/test/meta/get" method="post" enctype="multipart/form-data">
+    <p>
+        groupName : <input type="text" name="group"/>
+    <p>
+        filename : <input type="text" name="filename"/>
+    <p>
+        <input type="submit" value="get">
+</form>
+
+
+<h2>set file meta: /test/meta/set</h2>
+<form action="/test/meta/set" method="post" enctype="multipart/form-data">
+    <p>
+        groupName : <input type="text" name="group"/>
+    <p>
+        filename : <input type="text" name="filename"/>
+    <p>
+        meta : <input type="text" name="meta"/>
+    <p>
+        <input type="submit" value="set">
+</form>
+
+
+
+</body>
+</html>

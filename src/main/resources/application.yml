@@ -1,0 +1,23 @@
+spring:
+  application :
+    name: testfastdfs
+  http:
+    multipart:
+      max-file-size: 5368709120  #5g
+      max-request-size: 5368709120 #5g
+
+server:
+  port: 8088
+
+
+fdfs:
+  readTimeout: 600000
+  connectTimeout: 5000
+  idleTimeout: 600000
+  threadNum: 8
+  maxConnection: 100
+  trackerServers:
+     - rodbate1:22122
+
+
+spring.jmx.enabled: false
